@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  box-sizing: border-box;
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-container {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.07);
+}
+.todo-container > img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.todo-insert {
+  margin: 13px 0 0 13px;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.todos > li {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+li > input {
+  margin-right: 10px;
+}
+.todo_del {
+  margin-left: 10px;
+}

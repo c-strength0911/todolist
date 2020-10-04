@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>My Todo List</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <img src="./image1.jpg" alt="main image" />
+      <div class="todo-insert">
+        <form name="insert-list" method="GET" action="">
+          <input
+            type="text"
+            name="myTodoList"
+            placeholder="Please Enter Your Todolist"
+            id="inputTodoList"
+          />
+          <input type="submit" value="Make List" id="submit" />
+        </form>
+      </div>
+      <ul class="todos">
+        <li>
+          <input type="checkbox" id="todo_1" />
+          <label for="todo_1"><span class="check"></span>Read a book</label>
+          <div class="todo_del"><ion-icon name="trash-outline"></ion-icon></div>
+        </li>
+        <li>
+          <input type="checkbox" id="todo_2" />
+          <label for="todo_2"><span class="check"></span>Cook dinner</label>
+          <div class="todo_del"><ion-icon name="trash-outline"></ion-icon></div>
+        </li>
+        <li>
+          <input type="checkbox" id="todo_3" />
+          <label for="todo_3"><span class="check"></span>drink a water</label>
+          <div class="todo_del"><ion-icon name="trash-outline"></ion-icon></div>
+        </li>
+        <li>
+          <input type="checkbox" id="todo_4" />
+          <label for="todo_4"
+            ><span class="check"></span>Let's game with friend</label
+          >
+          <div class="todo_del"><ion-icon name="trash-outline"></ion-icon></div>
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  </body>
+</html>
