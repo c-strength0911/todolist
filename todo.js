@@ -30,9 +30,15 @@ function generateTemplate(curAdd) {
 //   todoLabel.setAttribute("class", "throght-line");
 // }
 todoLabel.forEach(function (input) {
-  input.addEventListener("click", function (e) {
-    input.setAttribute("class", "throght-line");
-  });
+  if (input.getAttribute("class") != "throght-line") {
+    input.addEventListener("click", function (e) {
+      input.setAttribute("class", "throght-line");
+    });
+  } else if (input.getAttribute("class") === "throght-line") {
+    input.addEventListener("click", function (e) {
+      input.removeAttribute("class");
+    });
+  }
 });
 
 addBtn.addEventListener("click", inputAction);
