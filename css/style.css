@@ -45,3 +45,6 @@ li > input {
 .todo_del {
   margin-left: 10px;
 }
+.throght-line {
+  text-decoration: line-through;
+}
