@@ -3,21 +3,36 @@ const todoDelBtn = document.querySelectorAll(".todo_del");
 const todos = document.querySelector(".todos");
 const list = document.querySelectorAll(".todos li");
 const addBtn = document.getElementById("add");
-let 
+const todoLabel = document.querySelectorAll("label");
+let listLength;
+let addTemplate;
+
 function inputAction() {
-  console.log(addList.value);
+  addTemplate = addList.value;
+  console.log(addTemplate);
+  generateTemplate(addTemplate);
   //   여기가 안됨
 }
 
-function generateTemplate() {
+function generateTemplate(curAdd) {
+  listLength = todos.length;
   const html = `
     <li>
-    <input type="checkbox" id="todo_${}" />
-    <label for="todo_${}"><span class="check"></span>${addList.value}</label>
+    <input type="checkbox" id="todo_${listLength}" />
+    <label for="todo_${listLength}"><span class="check"></span>${curAdd}</label>
     <div class="todo_del"><ion-icon name="trash-outline"></ion-icon></div>
     </li>
     `;
   todos.innerHTML += html;
-//   미완성
 }
+
+// function makeLineThroght() {
+//   todoLabel.setAttribute("class", "throght-line");
+// }
+todoLabel.forEach(function (input) {
+  input.addEventListener("click", function (e) {
+    input.setAttribute("class", "throght-line");
+  });
+});
+
 addBtn.addEventListener("click", inputAction);
