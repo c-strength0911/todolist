@@ -42,7 +42,7 @@ body {
 li > input {
   margin-right: 10px;
 }
-.todo_del {
+.todos__del-btn {
   margin-left: 10px;
 }
 .throght-line {
