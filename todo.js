@@ -4,10 +4,11 @@ const todos = document.querySelector(".todos");
 const list = document.querySelectorAll(".todos li");
 const insertAddBtn = document.getElementById("insertAddBtn");
 const labels = document.querySelectorAll("label");
-let listLength = list.length;
+let listLength;
 
 function inputAction() {
   console.log(todoInput.value);
+  listLength = list.length + 1;
   generateTemplate();
 }
 
@@ -23,6 +24,15 @@ function generateTemplate() {
   //   미완성
 }
 
-function makeLineThroght(e) {}
-todos.addEventListener("click", makeLineThroght(event));
+function checkEvent() {}
+
+function makeLineThroght() {
+  list.forEach(function (input) {
+    input.addEventListener("click", function () {
+      input.setAttribute("class", "throght-line");
+    });
+  });
+}
+list.addEventListener("click", makeLineThroght);
+todos.addEventListener("click", makeLineThroght);
 insertAddBtn.addEventListener("click", inputAction);
