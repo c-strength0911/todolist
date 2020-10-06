@@ -7,9 +7,13 @@ const labels = document.querySelectorAll("label");
 let listLength;
 
 function inputAction() {
-  console.log(todoInput.value);
-  listLength = list.length + 1;
-  generateTemplate();
+  if (!todoInput.value) {
+    alert("Enter your todo");
+  } else {
+    console.log(todoInput.value);
+    listLength = list.length + 1;
+    generateTemplate();
+  }
 }
 
 function generateTemplate() {
@@ -33,6 +37,6 @@ function makeLineThroght() {
     });
   });
 }
-list.addEventListener("click", makeLineThroght);
+// list.addEventListener("click", makeLineThroght);
 todos.addEventListener("click", makeLineThroght);
 insertAddBtn.addEventListener("click", inputAction);
