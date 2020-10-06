@@ -5,41 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>My Todo List</title>
   </head>
   <body>
     <div class="todo-container">
       <img src="./image1.jpg" alt="main image" />
       <div class="todo-insert">
-        <form name="insert-list" method="GET" action="">
+        <form name="insert-list" method="GET" action="" class="todo-form">
           <input
             type="text"
             name="myTodoList"
             placeholder="Please Enter Your Todolist"
             id="todoInput"
           />
-          <div id="insertAddBtn"><ion-icon name="add-outline"></ion-icon></div>
+          <div class="todo-btns" id="insertAddBtn">
+            <ion-icon name="add-outline"></ion-icon>
+          </div>
         </form>
       </div>
       <ul class="todos">
         <li>
           <input type="checkbox" id="todo_1" />
           <label for="todo_1"><span class="check"></span>Read a book</label>
-          <div class="todos__del-btn">
+          <div class="todos__del-btn todo-btns">
             <ion-icon name="trash-outline"></ion-icon>
           </div>
         </li>
         <li>
           <input type="checkbox" id="todo_2" />
           <label for="todo_2"><span class="check"></span>Cook dinner</label>
-          <div class="todos__del-btn">
+          <div class="todos__del-btn todo-btns">
             <ion-icon name="trash-outline"></ion-icon>
           </div>
         </li>
         <li>
           <input type="checkbox" id="todo_3" />
           <label for="todo_3"><span class="check"></span>drink a water</label>
-          <div class="todos__del-btn">
+          <div class="todos__del-btn todo-btns">
             <ion-icon name="trash-outline"></ion-icon>
           </div>
         </li>
@@ -48,7 +54,7 @@
           <label for="todo_4"
             ><span class="check"></span>Let's game with friend</label
           >
-          <div class="todos__del-btn">
+          <div class="todos__del-btn todo-btns">
             <ion-icon name="trash-outline"></ion-icon>
           </div>
         </li>
