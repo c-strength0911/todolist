@@ -1,17 +1,19 @@
-const addList = document.getElementById("addList");
-const todoDelBtn = document.querySelectorAll(".todo_del");
+const todoInput = document.getElementById("todoInput");
+const todoDelBtn = document.querySelectorAll(".todos__del-btn");
 const todos = document.querySelector(".todos");
 const list = document.querySelectorAll(".todos li");
-const addBtn = document.getElementById("add");
-const todoLabel = document.querySelectorAll("label");
+const insertAddBtn = document.getElementById("insertAddBtn");
+const labels = document.querySelectorAll("label");
 let listLength;
-let addTemplate;
 
 function inputAction() {
-  addTemplate = addList.value;
-  console.log(addTemplate);
-  generateTemplate(addTemplate);
-  //   여기가 안됨
+  if (!todoInput.value) {
+    alert("Enter your todo");
+  } else {
+    console.log(todoInput.value);
+    listLength = list.length + 1;
+    generateTemplate();
+  }
 }
 
 function generateTemplate(curAdd) {
@@ -19,26 +21,23 @@ function generateTemplate(curAdd) {
   const html = `
     <li>
     <input type="checkbox" id="todo_${listLength}" />
-    <label for="todo_${listLength}"><span class="check"></span>${curAdd}</label>
-    <div class="todo_del"><ion-icon name="trash-outline"></ion-icon></div>
+    <label for="todo_${listLength}"><span class="check"></span>${todoInput.value}</label>
+    <div class="todos__del-btn"><ion-icon name="trash-outline"></ion-icon></div>
     </li>
     `;
   todos.innerHTML += html;
+  //   미완성
 }
 
-// function makeLineThroght() {
-//   todoLabel.setAttribute("class", "throght-line");
-// }
-todoLabel.forEach(function (input) {
-  if (input.getAttribute("class") != "throght-line") {
-    input.addEventListener("click", function (e) {
+function checkEvent() {}
+
+function makeLineThroght() {
+  list.forEach(function (input) {
+    input.addEventListener("click", function () {
       input.setAttribute("class", "throght-line");
     });
-  } else if (input.getAttribute("class") === "throght-line") {
-    input.addEventListener("click", function (e) {
-      input.removeAttribute("class");
-    });
-  }
-});
-
-addBtn.addEventListener("click", inputAction);
+  });
+}
+// list.addEventListener("click", makeLineThroght);
+todos.addEventListener("click", makeLineThroght);
+insertAddBtn.addEventListener("click", inputAction);

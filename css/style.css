@@ -2,6 +2,11 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 16px !important;
+}
 body {
   box-sizing: border-box;
   background-color: burlywood;
@@ -9,6 +14,12 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+form > input {
+  border: none;
+  border-bottom: 1px solid #292929;
+  width: 80%;
 }
 .todo-container {
   background-color: white;
@@ -26,8 +37,20 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.todo-form {
+  display: flex;
+  flex-direction: row;
+}
 .todo-insert {
-  margin: 13px 0 0 13px;
+  margin: 10px 0 0 13px;
+}
+ion-icon {
+  width: 100%;
+  height: 100%;
+}
+.todo-btns {
+  width: 20px;
+  height: 20px;
 }
 .todos {
   display: flex;
@@ -42,7 +65,7 @@ body {
 li > input {
   margin-right: 10px;
 }
-.todo_del {
+.todo-btns {
   margin-left: 10px;
 }
 .throght-line {
