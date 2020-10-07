@@ -6,6 +6,18 @@ const insertAddBtn = document.getElementById("insertAddBtn");
 const labels = document.querySelectorAll("label");
 let listLength;
 
+// todos.addEventListener("click", function (event) {
+//   if (event.target.tagName === "INPUT") {
+//     event.target.parentElement.setAttribute("class", "throght-line");
+//   }
+// });
+
+todos.addEventListener("click", function (event) {
+  if (event.target.tagName === "INPUT") {
+    event.target.parentElement.setAttribute("class", "throght-line");
+  }
+});
+
 function inputAction() {
   if (!todoInput.value) {
     alert("Enter your todo");
@@ -16,7 +28,7 @@ function inputAction() {
   }
 }
 
-function generateTemplate(curAdd) {
+function generateTemplate() {
   listLength = todos.length;
   const html = `
     <li>
@@ -31,13 +43,13 @@ function generateTemplate(curAdd) {
 
 function checkEvent() {}
 
-function makeLineThroght() {
-  list.forEach(function (input) {
-    input.addEventListener("click", function () {
-      input.setAttribute("class", "throght-line");
-    });
-  });
-}
+// function makeLineThroght() {
+//   list.forEach(function (input) {
+//     input.addEventListener("click", function () {
+//       input.setAttribute("class", "throght-line");
+//     });
+//   });
+// }
 // list.addEventListener("click", makeLineThroght);
-todos.addEventListener("click", makeLineThroght);
+//todos.addEventListener("click", makeLineThroght);
 insertAddBtn.addEventListener("click", inputAction);
