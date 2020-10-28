@@ -16,8 +16,15 @@ todos.addEventListener("click", function (event) {
   if (event.target.tagName === "INPUT") {
     event.target.parentElement.setAttribute("class", "throght-line");
   }
+ // if(event.target.tagName === "INPUT" && event.target.parentElement.getAttribute("class") === "throght-line") {
+  //  event.target.parentElement.setAttribute("class", "");
+ // }
 });
-
+todos.addEventListener("click", function(event){
+  if (e.target.tagName === "ion-icon") {
+    e.target.re
+  }
+})
 function inputAction() {
   if (!todoInput.value) {
     alert("Enter your todo");
@@ -41,8 +48,9 @@ function generateTemplate() {
   //   미완성
 }
 
-function checkEvent() {}
+function removeList (e) {
 
+}
 // function makeLineThroght() {
 //   list.forEach(function (input) {
 //     input.addEventListener("click", function () {
