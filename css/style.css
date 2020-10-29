@@ -71,3 +71,6 @@ li > input {
 .throght-line {
   text-decoration: line-through;
 }
+input[type="checkbox"] {
+  display: none;
+}

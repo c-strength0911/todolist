@@ -3,7 +3,7 @@ const todoDelBtn = document.querySelectorAll(".todos__del-btn");
 const todos = document.querySelector(".todos");
 const list = document.querySelectorAll(".todos li");
 const insertAddBtn = document.getElementById("insertAddBtn");
-const labels = document.querySelectorAll("label");
+const labels = document.querySelector("label");
 let listLength;
 
 // todos.addEventListener("click", function (event) {
@@ -13,6 +13,7 @@ let listLength;
 // });
 
 todos.addEventListener("click", function (event) {
+  console.log(event.target.tagName);
   if (event.target.tagName === "INPUT") {
     event.target.parentElement.setAttribute("class", "throght-line");
   }
